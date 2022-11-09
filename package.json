@@ -1,5 +1,5 @@
 {
-  "name": "Node-Express-Mysql-Boilerplate",
+  "name": "Node-Express-Postgress-Grpc-Boilerplate",
   "version": "1.0.0",
   "description": "Boilerplate for Node-Express with sequelize ORM",
   "main": "src/index.js",
