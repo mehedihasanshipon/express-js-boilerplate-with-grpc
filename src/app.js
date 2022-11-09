@@ -7,8 +7,6 @@ const { jwtStrategy } = require('./config/passport');
 const { errorConverter, errorHandler } = require('./middlewares/error');
 const ApiError = require('./helper/ApiError');
 
-const client = require("../grpc");
-
 process.env.PWD = process.cwd();
 
 const app = express();
@@ -29,18 +27,6 @@ passport.use('jwt', jwtStrategy);
 app.get('/', async (req, res) => {
     res.status(200).send('Congratulations! API is working!');
 });
-
-// app.get('/grpc', async (req, res) => {
-//     client.getAll(null, (err, data) => {
-
-//         if (data) {
-//             res.json({ data: data });
-//         } else {
-//             res.status(500).json({ error: 'Something went wrong' });
-//         }
-//     });
-
-// });
 
 app.use('/api', routes);
 
