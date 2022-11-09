@@ -20,7 +20,8 @@ class GrpcController {
                 if (data) {
                     res.json({ data: data });
                 } else {
-                    res.status(500).json({ error: 'Something went wrong' });
+                    console.log(err, 'err grpc===========>>>')
+                    res.status(500).json({ error: 'Something went wrong.Not ok!!' });
                 }
             });
         } catch (e) {
